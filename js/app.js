@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // ── Inisialisasi peta ──
   var map = L.map("map").setView([-5.40, 105.26], 12);
 
-  // Basemap CartoDB Voyager (Bebas blokir 403 & ramah protokol file:///)
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+  // Basemap Esri WorldStreetMap (Gratis, Tanpa API Key, Tanpa Watermark)
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
     maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    attribution: 'Tiles &copy; Esri'
   }).addTo(map);
 
   // Group penampung marker
